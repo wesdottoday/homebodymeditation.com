@@ -4,13 +4,13 @@
  */
 
 /* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Karla:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap');
 
 /* CSS Variables - Brand Colors */
 :root {
   /* Typography */
   --font-heading: 'Cormorant Garamond', serif;
-  --font-body: 'Karla', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
   
   /* Colors - Cool Cozy Neutrals */
   --deep-espresso: #2B241E;
@@ -47,7 +47,7 @@ body {
   background-color: var(--warm-birch);
   line-height: var(--line-height-body);
   letter-spacing: var(--letter-spacing);
-  font-size: 16px;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -74,8 +74,11 @@ h3 {
 }
 
 p {
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
   max-width: 65ch;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 a {
@@ -136,32 +139,101 @@ body.has-hero header {
   font-family: var(--font-heading);
   font-size: 1.75rem;
   margin: 0;
+  position: relative;
+  z-index: 102;
 }
 
 .site-title a {
   color: var(--deep-espresso);
 }
 
-nav ul {
+/* Hamburger Menu */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 102;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--deep-espresso);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Navigation */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--warm-birch);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 101;
+}
+
+.main-nav.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.main-nav ul {
   list-style: none;
   display: flex;
+  flex-direction: column;
   gap: var(--spacing-lg);
   margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-nav a {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  text-transform: lowercase;
-  letter-spacing: 0.05em;
+.main-nav a {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 0.02em;
   padding: var(--spacing-xs) 0;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.3s ease;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease, opacity 0.3s ease;
+  color: var(--deep-espresso);
 }
 
-nav a:hover,
-nav a.active {
+.main-nav a:hover,
+.main-nav a.active {
   border-bottom-color: var(--pale-olive);
+  opacity: 0.8;
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+  overflow: hidden;
 }
 
 /* Hero Section */
@@ -214,14 +286,14 @@ nav a.active {
 }
 
 .hero h1 {
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 0.25rem;
   color: var(--deep-espresso);
   text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .hero .subheadline {
   font-family: var(--font-heading);
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
   color: var(--deep-espresso);
   margin-bottom: var(--spacing-md);
   text-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
@@ -283,7 +355,6 @@ nav a.active {
   padding: 0.875rem 2rem;
   font-family: var(--font-body);
   font-size: 1rem;
-  text-transform: lowercase;
   letter-spacing: 0.05em;
   background-color: var(--deep-espresso);
   color: var(--warm-birch);
@@ -353,11 +424,16 @@ footer p {
 }
 
 .about-content h2 {
-  text-align: left;
+  text-align: center;
 }
 
 .about-content p {
-  text-align: left;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Offerings Content */
+.offerings-content p {
+  margin-bottom: var(--spacing-md);
 }
 
 /* Offerings CTA */
@@ -381,16 +457,6 @@ footer p {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    gap: var(--spacing-md);
-  }
-  
-  nav ul {
-    gap: var(--spacing-md);
-    font-size: 0.9rem;
-  }
-  
   .section {
     padding: var(--spacing-lg) 0;
   }
@@ -409,5 +475,9 @@ footer p {
   
   h1 {
     font-size: 2.5rem;
+  }
+  
+  .main-nav a {
+    font-size: 2rem;
   }
 }

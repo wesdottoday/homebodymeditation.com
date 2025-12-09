@@ -1,6 +1,6 @@
 baseURL = 'https://homebodypractice.com/'
 languageCode = 'en-us'
-title = 'Homebody Practice'
+title = 'Homebody Meditation'
 theme = 'homebody'
 
 [params]
@@ -10,20 +10,31 @@ theme = 'homebody'
   # Homepage Hero Section
   [params.hero]
     image = "hero-image.jpg"  # Place your image in themes/homebody/static/images/
-    headline = "Welcome to Homebody Practice"
-    subheadline = "Meditation for real life"
-    description = "A space for remembering connection — to yourself, your breath, and the quiet thread that runs through even the busiest days."
+    headline = "Welcome to Homebody Meditation"
+    subheadline = "Rooted in connection, meditation for real life."
+    description = "Homebody offers gentle, guided meditation sessions to help you practice connection day by day. Together, we practice simple ways to reconnect in the middle of real life."
+    descriptioncta = "Homebody is an invitation to come home to yourself, not to a perfect calm, but to a real one."
 
   # Homepage About Section
   [params.about]
     headline = "About"
-    content = "Content coming soon. This is where we'll share more about the practice and approach."
+    content = """
+Homebody Practice is a place to reconnect – to your breath, to your body, and to the quiet thread that runs through even the busiest days.
+
+
+Each session offers a simple, relational way to practice meditation, rooted in presence. It's an approach that includes conversation, guided meditation, reflection, and gentle rhythms you can carry into daily life.
+"""
 
   # Homepage Offerings Section
   [params.offerings]
-    headline = "Offerings"
-    intro = "Grounded practices for everyday life."
-    description = "Explore offerings designed to help you reconnect with yourself and find calm in the midst of life's rhythms."
+    headline = "Rooted Sessions"
+    description = """
+A five-week, one-on-one meditation journey to help you build a steady personal practice, one that feels supportive, lived in and real.
+
+Each week blends guided meditation and reflection, giving you space to ground, breathe and remember connection.
+"""
+    button_text = "Learn More"
+    button_link = "/sessions/"
 
   # Homepage CTA Section
   [params.cta]
@@ -41,9 +52,9 @@ theme = 'homebody'
 [[menu.main]]
   name = "About"
   url = "/about/"
-  weight = 2
+  weight = 3
 
 [[menu.main]]
-  name = "Offerings"
-  url = "/offerings/"
-  weight = 3
+  name = "Sessions"
+  url = "/sessions/"
+  weight = 2
