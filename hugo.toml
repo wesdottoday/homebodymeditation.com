@@ -9,8 +9,8 @@ theme = 'homebody'
 
   # Homepage Hero Section
   [params.hero]
-    image = "hero-image.jpg"  # Place your image in themes/homebody/static/images/
-    headline = "Welcome to Homebody Meditation"
+    image = "my-tree.jpeg"  # Place your image in themes/homebody/static/images/
+    headline = "Homebody Meditation"
     subheadline = "Rooted in connection, meditation for real life."
     description = "Homebody offers gentle, guided meditation sessions to help you practice connection day by day. Together, we practice simple ways to reconnect in the middle of real life."
     descriptioncta = "Homebody is an invitation to come home to yourself, not to a perfect calm, but to a real one."
@@ -27,14 +27,28 @@ Each session offers a simple, relational way to practice meditation, rooted in p
 
   # Homepage Offerings Section
   [params.offerings]
-    headline = "Rooted Sessions"
-    description = """
+    section_headline = "Offerings"
+    
+    [params.offerings.rooted]
+      headline = "Rooted Sessions"
+      description = """
 A five-week, one-on-one meditation journey to help you build a steady personal practice, one that feels supportive, lived in and real.
 
 Each week blends guided meditation and reflection, giving you space to ground, breathe and remember connection.
 """
-    button_text = "Learn More"
-    button_link = "/sessions/"
+      button_text = "Learn More"
+      button_link = "/sessions/"
+    
+    [params.offerings.community]
+      headline = "Community Sessions"
+      description = """
+A welcoming space for group meditation, where we gather to practice presence together. These sessions offer guided meditation, shared reflection, and the support of practicing alongside others.
+
+No experience needed — just an open heart and a willingness to pause. Drop in when you can, and find connection in community.
+"""
+      button_text = "Register"
+      button_link = "https://example.com/register"
+      external = true
 
   # Homepage CTA Section
   [params.cta]

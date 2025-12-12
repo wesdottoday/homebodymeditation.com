@@ -1,1 +1,6 @@
 public/
+*.png
+*.jpg
+*.jpeg
+!static/images/*
+!themes/*/static/images/*

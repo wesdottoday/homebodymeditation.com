@@ -14,27 +14,52 @@
     </div>
 </section>
 
-<!-- About Section - inspired by Mary Beth's welcome section -->
-<section class="content-section section-alt">
+<!-- Offerings Section -->
+<section class="content-section offerings-section">
     <div class="container">
-        <div class="about-layout">
-            <div class="about-content">
-                <h2>{{ .Site.Params.about.headline }}</h2>
-                {{ .Site.Params.about.content | markdownify }}
+        {{ with .Site.Params.offerings.section_headline }}
+        <h2 class="section-headline">{{ . }}</h2>
+        {{ end }}
+        <div class="offerings-grid">
+            <!-- Rooted Sessions (left on desktop, top on mobile) -->
+            <div class="offering-item">
+                <h3>{{ .Site.Params.offerings.rooted.headline }}</h3>
+                <div class="offering-description">
+                    {{ .Site.Params.offerings.rooted.description | markdownify }}
+                </div>
+                <div class="offering-cta">
+                    <a href="{{ .Site.Params.offerings.rooted.button_link }}" class="btn btn-secondary">{{ .Site.Params.offerings.rooted.button_text }}</a>
+                </div>
+            </div>
+            
+            <!-- Vertical Divider -->
+            <div class="offerings-divider"></div>
+            
+            <!-- Community Sessions (right on desktop, bottom on mobile) -->
+            <div class="offering-item">
+                <h3>{{ .Site.Params.offerings.community.headline }}</h3>
+                <div class="offering-description">
+                    {{ .Site.Params.offerings.community.description | markdownify }}
+                </div>
+                <div class="offering-cta">
+                    <a href="{{ .Site.Params.offerings.community.button_link }}" class="btn btn-secondary"{{ if .Site.Params.offerings.community.external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Site.Params.offerings.community.button_text }}</a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Offerings Section -->
-<section class="content-section">
-    <div class="container">
-        <h2>{{ .Site.Params.offerings.headline }}</h2>
-        <div class="offerings-content">
-            {{ .Site.Params.offerings.description | markdownify }}
+<!-- About Section - inspired by Mary Beth's welcome section -->
+<section class="content-section section-alt about-section-wrapper">
+    <div class="about-layout">
+        <div class="about-image">
+            <img src="/images/melissa-headshot.png" alt="Melissa Headshot">
         </div>
-        <div class="offerings-cta">
-            <a href="{{ .Site.Params.offerings.button_link }}" class="btn btn-secondary">{{ .Site.Params.offerings.button_text }}</a>
+        <div class="about-content">
+            <div class="about-content-inner">
+                <h2>{{ .Site.Params.about.headline }}</h2>
+                {{ .Site.Params.about.content | markdownify }}
+            </div>
         </div>
     </div>
 </section>

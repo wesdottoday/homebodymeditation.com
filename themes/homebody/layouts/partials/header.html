@@ -1,22 +1,20 @@
 <header>
-    <div class="container">
-        <div class="site-header">
-            <h1 class="site-title">
-                <a href="/">{{ .Site.Title }}</a>
-            </h1>
-            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="main-nav">
-                <ul>
-                    {{ range .Site.Menus.main }}
-                    <li><a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a></li>
-                    {{ end }}
-                </ul>
-            </nav>
-        </div>
+    <div class="site-header">
+        <h1 class="site-title">
+            <a href="/">{{ .Site.Title }}</a>
+        </h1>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="main-nav">
+            <ul>
+                {{ range .Site.Menus.main }}
+                <li><a href="{{ .URL }}" {{ if $.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a></li>
+                {{ end }}
+            </ul>
+        </nav>
     </div>
 </header>
 
