@@ -8,18 +8,14 @@
     {{ end }}
     <div class="hero-content">
         <h1>{{ .Site.Params.hero.headline }}</h1>
-        <p class="subheadline">{{ .Site.Params.hero.subheadline }}</p>
+        <p class="subheadline">{{ .Site.Params.hero.subheadline | safeHTML }}</p>
         <p>{{ .Site.Params.hero.description }}</p>
-        <p class="description-cta">{{ .Site.Params.hero.descriptioncta }}</p>
     </div>
 </section>
 
 <!-- Offerings Section -->
 <section class="content-section offerings-section">
     <div class="container">
-        {{ with .Site.Params.offerings.section_headline }}
-        <h2 class="section-headline">{{ . }}</h2>
-        {{ end }}
         <div class="offerings-grid">
             <!-- Rooted Sessions (left on desktop, top on mobile) -->
             <div class="offering-item">

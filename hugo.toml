@@ -11,9 +11,8 @@ theme = 'homebody'
   [params.hero]
     image = "my-tree.jpeg"  # Place your image in themes/homebody/static/images/
     headline = "Homebody Meditation"
-    subheadline = "Rooted in connection, meditation for real life."
-    description = "Homebody offers gentle, guided meditation sessions to help you practice connection day by day. Together, we practice simple ways to reconnect in the middle of real life."
-    descriptioncta = "Homebody is an invitation to come home to yourself, not to a perfect calm, but to a real one."
+    subheadline = "Rooted in connection<br>Meditation for real life"
+    description = "Homebody offers gentle, guided meditation sessions to help you practice connection day by day. Homebody is an invitation to come home to yourself, not to a perfect calm, but to a real one."
 
   # Homepage About Section
   [params.about]
@@ -27,8 +26,6 @@ Each session offers a simple, relational way to practice meditation, rooted in p
 
   # Homepage Offerings Section
   [params.offerings]
-    section_headline = "Offerings"
-    
     [params.offerings.rooted]
       headline = "Rooted Sessions"
       description = """
@@ -42,9 +39,9 @@ Each week blends guided meditation and reflection, giving you space to ground, b
     [params.offerings.community]
       headline = "Community Sessions"
       description = """
-A welcoming space for group meditation, where we gather to practice presence together. These sessions offer guided meditation, shared reflection, and the support of practicing alongside others.
+A welcoming space for group meditation, where we gather to practice presence together. These five weekly sessions offer guided meditation, shared reflection, and the support of practicing alongside others.
 
-No experience needed — just an open heart and a willingness to pause. Drop in when you can, and find connection in community.
+No experience needed, just an open heart and a willingness to pause and find connection in community.
 """
       button_text = "Register"
       button_link = "https://example.com/register"

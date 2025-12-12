@@ -553,11 +553,6 @@ body.menu-open {
   background-color: var(--warm-birch); /* Moved from About */
 }
 
-.offerings-section .section-headline {
-  text-align: center;
-  margin-bottom: var(--spacing-xl);
-}
-
 /* Mobile: Stacked layout */
 .offerings-grid {
   display: flex;
@@ -603,15 +598,16 @@ body.menu-open {
   }
 
   .offering-item {
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 
   .offering-description p {
-    text-align: left;
-    margin-left: 0;
-    margin-right: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .offering-cta {
