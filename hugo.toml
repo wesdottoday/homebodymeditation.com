@@ -1,4 +1,4 @@
-baseURL = 'https://homebodypractice.com/'
+baseURL = 'https://homebodymeditation.com/'
 languageCode = 'en-us'
 title = 'Homebody Meditation'
 theme = 'homebody'
@@ -35,7 +35,7 @@ A five-week, one-on-one meditation journey to help you build a steady personal p
 Each week blends guided meditation and reflection, giving you space to ground, breathe and remember connection.
 """
       button_text = "Learn More"
-      button_link = "/sessions/"
+      button_link = "/rooted-sessions/"
     
     [params.offerings.community]
       headline = "Community Sessions"
@@ -53,7 +53,6 @@ No experience needed, just an open heart and a willingness to pause and find con
     headline = "Let's Connect"
     content = "Interested in learning more or working together? I'd love to hear from you."
     button_text = "Get in Touch"
-    button_link = "mailto:hello@homebodypractice.com"
 
 # Main menu
 [[menu.main]]
@@ -62,11 +61,11 @@ No experience needed, just an open heart and a willingness to pause and find con
   weight = 1
 
 [[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 3
+  name = "Rooted Sessions"
+  url = "/rooted-sessions/"
+  weight = 2
 
 [[menu.main]]
-  name = "Sessions"
-  url = "/sessions/"
-  weight = 2
+  name = "Bio"
+  url = "/bio/"
+  weight = 3

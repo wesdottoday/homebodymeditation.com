@@ -1,7 +1,7 @@
 name = "Homebody"
 license = "MIT"
 description = "A calm, grounded theme for meditation and wellness practices"
-homepage = "https://homebodypractice.com"
+homepage = "https://homebodymeditation.com"
 tags = ["minimal", "wellness", "meditation", "clean"]
 features = ["responsive", "custom-colors"]
 min_version = "0.120.0"

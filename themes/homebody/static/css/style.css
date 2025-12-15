@@ -645,6 +645,260 @@ footer p {
 }
 
 /* ==================== */
+/* PAGE CONTENT         */
+/* ==================== */
+.page-content-section {
+  background-color: var(--warm-birch);
+}
+
+.page-content-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.page-content-wrapper h2 {
+  text-align: left;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.page-content-wrapper p {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.page-content-wrapper ul,
+.page-content-wrapper ol {
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-md);
+}
+
+.page-content-wrapper li {
+  margin-bottom: var(--spacing-sm);
+  font-weight: 300;
+}
+
+.page-content-wrapper strong {
+  font-weight: 600;
+}
+
+.page-content-wrapper em {
+  font-style: italic;
+}
+
+/* ==================== */
+/* CONTACT MODAL        */
+/* ==================== */
+.contact-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--taupe-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 1001;
+  overflow-y: auto;
+}
+
+.contact-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.contact-modal-open {
+  overflow: hidden;
+}
+
+.contact-modal-content {
+  width: 100%;
+  max-width: 600px;
+  padding: var(--spacing-xl) var(--spacing-md);
+  position: relative;
+}
+
+.contact-modal-inner {
+  text-align: center;
+}
+
+.contact-modal-inner h2 {
+  color: var(--deep-espresso);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Close button - X style like hamburger */
+.contact-modal-close {
+  position: fixed;
+  top: calc(var(--header-height) / 2 - 10px);
+  right: var(--spacing-md);
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1002;
+}
+
+.contact-modal-close span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--deep-espresso);
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.contact-modal-close span:first-child {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.contact-modal-close span:last-child {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.contact-modal-close:hover span {
+  background-color: var(--warm-birch);
+}
+
+/* Contact intro text */
+.contact-intro {
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-intro p {
+  color: var(--deep-espresso);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50ch;
+}
+
+.contact-intro a {
+  color: var(--deep-espresso);
+  text-decoration: underline;
+}
+
+.contact-intro a:hover {
+  color: var(--warm-birch);
+}
+
+/* Contact form container */
+.contact-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--deep-espresso);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid var(--soft-clay);
+  border-radius: 0;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  background-color: var(--cream-bg);
+  color: var(--deep-espresso);
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--soft-clay);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--deep-espresso);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Honeypot field - completely hidden */
+.honey-pot-field {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Submit button in modal */
+.contact-container .btn {
+  background-color: transparent;
+  color: var(--deep-espresso);
+  border: 1px solid var(--deep-espresso);
+  width: 100%;
+  margin-top: var(--spacing-sm);
+}
+
+.contact-container .btn:hover {
+  background-color: var(--warm-birch);
+  border-color: var(--warm-birch);
+  color: var(--deep-espresso);
+}
+
+.contact-container .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Status messages */
+#form-status {
+  margin-top: var(--spacing-md);
+  padding: 1rem;
+  border-radius: 0;
+  display: none;
+  text-align: center;
+}
+
+#form-status.success {
+  background-color: var(--pale-olive);
+  color: var(--deep-espresso);
+  border: 1px solid var(--pale-olive);
+}
+
+#form-status.error {
+  background-color: var(--sun-coral);
+  color: var(--deep-espresso);
+  border: 1px solid var(--sun-coral);
+}
+
+/* ==================== */
 /* RESPONSIVE           */
 /* ==================== */
 @media (max-width: 768px) {
@@ -666,5 +920,9 @@ footer p {
   
   .main-nav a {
     font-size: 1.75rem;
+  }
+
+  .contact-modal-content {
+    padding: calc(var(--header-height) + var(--spacing-lg)) var(--spacing-md) var(--spacing-lg);
   }
 }
