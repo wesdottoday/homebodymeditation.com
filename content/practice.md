@@ -1,14 +1,14 @@
 ---
-title: "Rooted Sessions"
+title: "Practice"
 hero_image: "my-tree.jpeg"
 subheadline: "A Five-Week Meditation Journey"
 description: "One-on-one sessions to help you build a steady personal practice that feels supportive, lived in, and real."
 contact_form: true
 contact_form_cta_title: "Ready to sign up?"
-contact_form_cta_copy: "If Rooted Sessions sound right for you, I would love for you to reach out so we can schedule our first session!"
+contact_form_cta_copy: "If Individual Sessions sound right for you, I would love for you to reach out so we can schedule our first session!"
 ---
 
-Rooted Sessions offer space to slow down, listen in, and begin (or return to) a meditation practice that feels grounded in real life.
+Individual Sessions offer space to slow down, listen in, and begin (or return to) a meditation practice that feels grounded in real life.
 
 Each week, we meet for a 45-minute session, a blend of conversation, guided meditation, and reflection. Between sessions, you'll receive a recorded practice meditation, created by me, to support a simple daily rhythm at home.
 

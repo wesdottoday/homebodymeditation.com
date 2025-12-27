@@ -3,9 +3,20 @@
 <!-- Hero Section - Similar to homepage with configurable image -->
 <section class="hero{{ if .Params.hero_image }} has-image{{ end }}">
     {{ if .Params.hero_image }}
-    <img src="/images/{{ .Params.hero_image }}" alt="{{ .Title }}" class="hero-image">
-    <div class="hero-overlay"></div>
-    {{ end }}
+    <div class="hero-wrapper">
+        <img src="/images/{{ .Params.hero_image }}" alt="{{ .Title }}" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>{{ .Title }}</h1>
+            {{ if .Params.subheadline }}
+            <p class="subheadline">{{ .Params.subheadline | safeHTML }}</p>
+            {{ end }}
+            {{ if .Params.description }}
+            <p>{{ .Params.description }}</p>
+            {{ end }}
+        </div>
+    </div>
+    {{ else }}
     <div class="hero-content">
         <h1>{{ .Title }}</h1>
         {{ if .Params.subheadline }}
@@ -15,6 +26,7 @@
         <p>{{ .Params.description }}</p>
         {{ end }}
     </div>
+    {{ end }}
 </section>
 
 <!-- Main Content Section -->

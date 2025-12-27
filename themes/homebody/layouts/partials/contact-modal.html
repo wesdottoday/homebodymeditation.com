@@ -1,32 +1,14 @@
 {{- /* Default values from site config */ -}}
-{{- $ctaTitle := .Site.Params.cta.headline -}}
-{{- $ctaCopy := .Site.Params.cta.content -}}
-{{- $ctaButton := .Site.Params.cta.button_text -}}
 {{- $modalTitle := "Let's Connect" -}}
 {{- $modalCopy := "However you've found your way here, welcome.\n\nIf you're curious about working together or just want to share where you are in your practice, reach out. I'd love to connect!\n\nThis space moves at a human pace. I read and respond to each message with care, usually within a few days. You can use the form below or email me directly at [melissa@homebodymeditation.com](mailto:melissa@homebodymeditation.com)." -}}
 
 {{- /* Override with page frontmatter if provided */ -}}
-{{- if .Params.contact_form_cta_title -}}
-    {{- $ctaTitle = .Params.contact_form_cta_title -}}
-{{- end -}}
-{{- if .Params.contact_form_cta_copy -}}
-    {{- $ctaCopy = .Params.contact_form_cta_copy -}}
-{{- end -}}
 {{- if .Params.contact_form_modal_title -}}
     {{- $modalTitle = .Params.contact_form_modal_title -}}
 {{- end -}}
 {{- if .Params.contact_form_modal_copy -}}
     {{- $modalCopy = .Params.contact_form_modal_copy -}}
 {{- end -}}
-
-<!-- CTA Section - Let's Connect -->
-<section class="cta-section">
-    <div class="container">
-        <h2>{{ $ctaTitle }}</h2>
-        <p>{{ $ctaCopy }}</p>
-        <button type="button" class="btn contact-modal-trigger">{{ $ctaButton }}</button>
-    </div>
-</section>
 
 <!-- Contact Modal - Full viewport overlay -->
 <div class="contact-modal" id="contact-modal">

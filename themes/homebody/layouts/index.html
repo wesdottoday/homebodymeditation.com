@@ -3,14 +3,22 @@
 <!-- Hero Section - Full viewport with configurable image -->
 <section class="hero{{ if .Site.Params.hero.image }} has-image{{ end }}">
     {{ if .Site.Params.hero.image }}
-    <img src="/images/{{ .Site.Params.hero.image }}" alt="{{ .Site.Params.hero.headline }}" class="hero-image">
-    <div class="hero-overlay"></div>
-    {{ end }}
+    <div class="hero-wrapper">
+        <img src="/images/{{ .Site.Params.hero.image }}" alt="{{ .Site.Params.hero.headline }}" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>{{ .Site.Params.hero.headline }}</h1>
+            <p class="subheadline">{{ .Site.Params.hero.subheadline | safeHTML }}</p>
+            <p>{{ .Site.Params.hero.description }}</p>
+        </div>
+    </div>
+    {{ else }}
     <div class="hero-content">
         <h1>{{ .Site.Params.hero.headline }}</h1>
         <p class="subheadline">{{ .Site.Params.hero.subheadline | safeHTML }}</p>
         <p>{{ .Site.Params.hero.description }}</p>
     </div>
+    {{ end }}
 </section>
 
 <!-- Offerings Section -->
@@ -40,21 +48,6 @@
                 <div class="offering-cta">
                     <a href="{{ .Site.Params.offerings.community.button_link }}" class="btn btn-secondary"{{ if .Site.Params.offerings.community.external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .Site.Params.offerings.community.button_text }}</a>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- About Section - inspired by Mary Beth's welcome section -->
-<section class="content-section section-alt about-section-wrapper">
-    <div class="about-layout">
-        <div class="about-image">
-            <img src="/images/melissa-headshot.png" alt="Melissa Headshot">
-        </div>
-        <div class="about-content">
-            <div class="about-content-inner">
-                <h2>{{ .Site.Params.about.headline }}</h2>
-                {{ .Site.Params.about.content | markdownify }}
             </div>
         </div>
     </div>

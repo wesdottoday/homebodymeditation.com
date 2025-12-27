@@ -14,10 +14,11 @@
         {{ block "main" . }}{{ end }}
     </main>
     
-    {{ if or .IsHome .Params.contact_form }}
-    {{ partial "contact-section.html" . }}
-    {{ end }}
-    
+    {{ if ne .Layout "connect" }}
     {{ partial "footer.html" . }}
+    
+    <!-- Contact Modal - always included for the footer button -->
+    {{ partial "contact-modal.html" . }}
+    {{ end }}
 </body>
 </html>
