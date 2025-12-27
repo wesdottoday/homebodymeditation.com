@@ -9,10 +9,10 @@ theme = 'homebody'
 
   # Homepage Hero Section
   [params.hero]
-    image = "my-tree.jpeg"  # Place your image in themes/homebody/static/images/
-    headline = "Homebody Meditation"
-    subheadline = "Rooted in connection<br>Meditation for real life"
-    description = "Homebody offers gentle, guided meditation sessions to help you practice connection day by day. Homebody is an invitation to come home to yourself, not to a perfect calm, but to a real one."
+    image = ""  # Image removed from hero
+    headline = "Rooted in connection — meditation for real life"
+    subheadline = "Homebody offers gentle, guided meditation sessions to help you practice connection day by day. Homebody is an invitation to come home to yourself, not to a perfect calm, but to a real one."
+    description = ""
 
   # Homepage About Section
   [params.about]
@@ -28,24 +28,24 @@ Melissa's sessions, whether one-on-one or in community, Melissa uses breath and 
   # Homepage Offerings Section
   [params.offerings]
     [params.offerings.rooted]
-      headline = "Rooted Sessions"
+      headline = "Individual Sessions"
       description = """
 A five-week, one-on-one meditation journey to help you build a steady personal practice, one that feels supportive, lived in and real.
 
 Each week blends guided meditation and reflection, giving you space to ground, breathe and remember connection.
 """
       button_text = "Learn More"
-      button_link = "/rooted-sessions/"
+      button_link = "/practice/"
     
     [params.offerings.community]
-      headline = "Community Sessions"
+      headline = "Community Practice"
       description = """
 A welcoming space for group meditation, where we gather to practice presence together. These five weekly sessions offer guided meditation, shared reflection, and the support of practicing alongside others.
 
 No experience needed, just an open heart and a willingness to pause and find connection in community.
 """
-      button_text = "Register"
-      button_link = "https://example.com/register"
+      button_text = "Practice at Radiant"
+      button_link = "https://www.radiantyogaandwellness.com/events-block/beginner-meditation-series"
       external = true
 
   # Homepage CTA Section
@@ -61,11 +61,16 @@ No experience needed, just an open heart and a willingness to pause and find con
   weight = 1
 
 [[menu.main]]
-  name = "Rooted Sessions"
-  url = "/rooted-sessions/"
+  name = "Practice"
+  url = "/practice/"
   weight = 2
 
 [[menu.main]]
-  name = "Bio"
-  url = "/bio/"
+  name = "About"
+  url = "/about/"
   weight = 3
+
+[[menu.main]]
+  name = "Connect"
+  url = "/connect/"
+  weight = 4

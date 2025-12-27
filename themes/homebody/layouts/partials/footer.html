@@ -1,5 +1,27 @@
-<footer>
-    <div class="container">
-        <p>&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+{{- /* Use page-specific CTA values if provided, otherwise use defaults */ -}}
+{{- $ctaTitle := .Site.Params.cta.headline -}}
+{{- $ctaCopy := .Site.Params.cta.content -}}
+{{- $ctaButton := .Site.Params.cta.button_text -}}
+
+{{- if .Params.contact_form_cta_title -}}
+    {{- $ctaTitle = .Params.contact_form_cta_title -}}
+{{- end -}}
+{{- if .Params.contact_form_cta_copy -}}
+    {{- $ctaCopy = .Params.contact_form_cta_copy -}}
+{{- end -}}
+{{- if .Params.contact_form_cta_button -}}
+    {{- $ctaButton = .Params.contact_form_cta_button -}}
+{{- else -}}
+    {{- $ctaButton = .Site.Params.cta.button_text -}}
+{{- end -}}
+
+<footer class="footer-with-cta">
+    <div class="footer-content">
+        <div class="container">
+            <h2>{{ $ctaTitle }}</h2>
+            <p>{{ $ctaCopy }}</p>
+            <button type="button" class="btn contact-modal-trigger">{{ $ctaButton }}</button>
+            <p class="footer-copyright">&copy; {{ now.Year }} {{ .Site.Title }}. All rights reserved.</p>
+        </div>
     </div>
 </footer>
