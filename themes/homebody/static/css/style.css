@@ -317,7 +317,9 @@ body.menu-open {
 /* Mobile: Stacked layout */
 .hero-image {
   width: 100%;
-  height: 350px;
+  height: auto;
+  min-height: 350px;
+  max-height: 500px;
   object-fit: cover;
   display: block;
 }

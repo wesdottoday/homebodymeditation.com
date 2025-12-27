@@ -7,14 +7,14 @@
         <img src="/images/{{ .Site.Params.hero.image }}" alt="{{ .Site.Params.hero.headline }}" class="hero-image">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>{{ .Site.Params.hero.headline }}</h1>
+            <h1>{{ .Site.Params.hero.headline | safeHTML }}</h1>
             <p class="subheadline">{{ .Site.Params.hero.subheadline | safeHTML }}</p>
             <p>{{ .Site.Params.hero.description }}</p>
         </div>
     </div>
     {{ else }}
     <div class="hero-content">
-        <h1>{{ .Site.Params.hero.headline }}</h1>
+        <h1>{{ .Site.Params.hero.headline | safeHTML }}</h1>
         <p class="subheadline">{{ .Site.Params.hero.subheadline | safeHTML }}</p>
         <p>{{ .Site.Params.hero.description }}</p>
     </div>
