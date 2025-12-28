@@ -11,7 +11,7 @@ theme = 'homebody'
   [params.hero]
     image = ""  # Image removed from hero
     headline = "ROOTED IN CONNECTION.<br><br>MEDITATION FOR REAL LIFE."
-    subheadline = "Homebody offers gentle, guided meditation sessions to help you practice connection day by day. Homebody is an invitation to come home to yourself, not to a perfect calm, but to a real one."
+    subheadline = "Homebody offers gentle, guided meditation sessions to help you practice connection day-by-day. Homebody is an invitation to come home to yourself, not to a perfect calm, but to a real one."
     description = ""
 
   # Homepage About Section
