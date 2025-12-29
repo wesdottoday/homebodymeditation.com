@@ -255,10 +255,6 @@ body.menu-open {
 .hero {
   background-color: var(--warm-birch);
   padding-top: var(--header-height);
-  background-image: url('/images/my-tree.jpeg');
-  background-size: auto 60%;
-  background-position: center top;
-  background-repeat: no-repeat;
 }
 
 /* Linen texture for sections */
@@ -374,7 +370,6 @@ body.menu-open {
     align-items: center;
     justify-content: center;
     padding: var(--header-height) var(--spacing-md) var(--spacing-lg);
-    background-image: none;
   }
 
   .hero.has-image {
