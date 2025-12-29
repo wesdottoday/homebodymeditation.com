@@ -1118,6 +1118,11 @@ body.contact-modal-open {
     font-size: 1.75rem;
   }
 
+  .site-title {
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+
   .contact-modal-content {
     padding: calc(var(--header-height) + var(--spacing-lg)) var(--spacing-md) var(--spacing-lg);
   }
