@@ -144,7 +144,6 @@ header {
   margin: 0;
   position: relative;
   z-index: 102;
-  text-transform: uppercase;
   letter-spacing: 0.1em;
 }
 
@@ -349,7 +348,7 @@ body.menu-open {
   text-transform: none;
   letter-spacing: 0.03em;
   color: var(--deep-espresso);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
   display: block;
   max-width: 100%;
   margin-left: auto;
@@ -641,7 +640,7 @@ body.menu-open {
 
 .offering-item h3 {
   margin-bottom: var(--spacing-md);
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .offering-description p {
@@ -795,6 +794,35 @@ body.menu-open {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--deep-espresso);
+}
+
+/* Connect footer with tree roots background */
+.connect-footer {
+  position: relative;
+  background-image: url('/images/my-tree-roots.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.connect-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(168, 133, 119, 0.85);
+  z-index: 1;
+}
+
+.connect-footer .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* ==================== */
@@ -1090,7 +1118,37 @@ body.contact-modal-open {
     font-size: 1.75rem;
   }
 
+  .site-title {
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+
   .contact-modal-content {
     padding: calc(var(--header-height) + var(--spacing-lg)) var(--spacing-md) var(--spacing-lg);
+  }
+
+  .page-content-wrapper h2 {
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .page-content-section {
+    padding-bottom: var(--spacing-lg);
+  }
+
+  .page-content-wrapper p {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .about-content {
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+
+  .about-content p {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .content-section {
+    padding: var(--spacing-xl) 0;
   }
 }
