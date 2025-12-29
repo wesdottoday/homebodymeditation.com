@@ -8,6 +8,7 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>{{ .Site.Params.hero.headline | safeHTML }}</h1>
+            <div class="hero-divider"></div>
             <p class="subheadline">{{ .Site.Params.hero.subheadline | safeHTML }}</p>
             <p>{{ .Site.Params.hero.description }}</p>
         </div>
@@ -15,6 +16,7 @@
     {{ else }}
     <div class="hero-content">
         <h1>{{ .Site.Params.hero.headline | safeHTML }}</h1>
+        <div class="hero-divider"></div>
         <p class="subheadline">{{ .Site.Params.hero.subheadline | safeHTML }}</p>
         <p>{{ .Site.Params.hero.description }}</p>
     </div>

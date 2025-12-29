@@ -1,0 +1,64 @@
+{{ define "main" }}
+
+<!-- Hero Section - Similar to homepage with configurable image -->
+<section class="hero{{ if .Params.hero_image }} has-image{{ end }}">
+    {{ if .Params.hero_image }}
+    <div class="hero-wrapper">
+        <img src="/images/{{ .Params.hero_image }}" alt="{{ .Title }}" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>{{ .Title }}</h1>
+            {{ if .Params.subheadline }}
+            <div class="hero-divider"></div>
+            <p class="subheadline">{{ .Params.subheadline | safeHTML }}</p>
+            {{ end }}
+            {{ if .Params.description }}
+            <p>{{ .Params.description }}</p>
+            {{ end }}
+        </div>
+    </div>
+    {{ else }}
+    <div class="hero-content">
+        <h1>{{ .Title }}</h1>
+        {{ if .Params.subheadline }}
+        <div class="hero-divider"></div>
+        <p class="subheadline">{{ .Params.subheadline | safeHTML }}</p>
+        {{ end }}
+        {{ if .Params.description }}
+        <p>{{ .Params.description }}</p>
+        {{ end }}
+    </div>
+    {{ end }}
+</section>
+
+<!-- Intro Content Section -->
+<section class="content-section page-content-section">
+    <div class="container">
+        <div class="page-content-wrapper">
+            {{ .Params.intro | markdownify }}
+        </div>
+    </div>
+</section>
+
+<!-- Accordion Section -->
+<section class="content-section accordion-section">
+    <div class="container">
+        <div class="accordion">
+            {{ range $index, $item := .Params.accordion }}
+            <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
+                <button class="accordion-header" aria-expanded="{{ if eq $index 0 }}true{{ else }}false{{ end }}">
+                    <h2>{{ $item.title }}</h2>
+                </button>
+                <div class="accordion-content"{{ if eq $index 0 }} style="display: block;"{{ end }}>
+                    {{ $item.content | markdownify }}
+                </div>
+            </div>
+            {{ if not (eq $index (sub (len $.Params.accordion) 1)) }}
+            <div class="accordion-divider"></div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ end }}
