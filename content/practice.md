@@ -11,7 +11,7 @@ contact_form_cta_button: "Reach out"
 intro: |
   A gentle steady way to begin, or return to, meditation in the midst of real life.
   
-  These individual sessions offers space to slow down, listen in, and practice presence in a way that feels supportive and lived-in. We meet weekly for 45 minutes, belnding conversation, guided meditation and reflection.
+  These individual sessions offers space to slow down, listen in, and practice presence in a way that feels supportive and lived-in. We meet weekly for 45 minutes, blending conversation, guided meditation and reflection.
 
   This work isn't about getting meditation "right."
   It's about creating small, steady moments of connection you can return to.
