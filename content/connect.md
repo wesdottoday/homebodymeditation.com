@@ -1,5 +1,5 @@
 ---
-title: "Let's Connect"
+title: "Reach Out"
 layout: "connect"
 ---
 

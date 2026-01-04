@@ -40,25 +40,37 @@
     </div>
 </section>
 
-<!-- Accordion Section -->
-<section class="content-section accordion-section">
+<!-- Offerings-style Section -->
+<section class="content-section offerings-section practice-offerings-section">
     <div class="container">
-        <div class="accordion">
-            {{ range $index, $item := .Params.accordion }}
-            <div class="accordion-item{{ if eq $index 0 }} active{{ end }}">
-                <button class="accordion-header" aria-expanded="{{ if eq $index 0 }}true{{ else }}false{{ end }}">
-                    <h2>{{ $item.title }}</h2>
-                </button>
-                <div class="accordion-content"{{ if eq $index 0 }} style="display: block;"{{ end }}>
+        <div class="offerings-grid">
+            {{ range $index, $item := .Params.offerings }}
+            <div class="offering-item">
+                <h3>{{ $item.title }}</h3>
+                <div class="offering-description">
                     {{ $item.content | markdownify }}
                 </div>
             </div>
-            {{ if not (eq $index (sub (len $.Params.accordion) 1)) }}
-            <div class="accordion-divider"></div>
+            {{ if eq $index 0 }}
+            <div class="offerings-divider"></div>
             {{ end }}
             {{ end }}
         </div>
     </div>
 </section>
+
+<!-- Pricing Section -->
+{{ if .Params.pricing }}
+<section class="content-section pricing-section">
+    <div class="container">
+        <div class="pricing-wrapper">
+            <h2>{{ .Params.pricing.title }}</h2>
+            <div class="pricing-content">
+                {{ .Params.pricing.content | markdownify }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
 
 {{ end }}

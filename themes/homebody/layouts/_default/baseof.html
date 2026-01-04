@@ -7,7 +7,7 @@
     <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}">
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body{{ if and .IsHome .Site.Params.hero.image }} class="has-hero"{{ end }}>
+<body{{ if and .IsHome .Site.Params.hero.image }} class="has-hero"{{ else if eq .Layout "practice" }} class="practice-page"{{ end }}>
     {{ partial "header.html" . }}
     
     <main>

@@ -3,17 +3,27 @@ title: "Melissa Kennedy"
 hero_image: "melissa-headshot.png"
 subheadline: "Meditation Teacher"
 description: "Grounded in connection, shaped by curiosity, rooted in real life."
+content_image: "melissa-headshot.png"
 contact_form: true
+contact_form_cta_title: "An invitation"
+contact_form_cta_copy: "If something here resonates, you're welcome to reach out. I'm happy to offer a complimentary 15-minute phone call to connect and explore whether this work feels like a supportive fit for you."
+contact_form_cta_button: "Let's Connect"
+guides:
+  title: "What guides this practice"
+  content: |
+    - Start where you are
+    - Practice over perfection
+    - Connection can be gentle
+    - Home isn't a destination; it's something we practice
+
+    This work isn't about fixing yourself. It's about listening, reconnecting, and remembering what's already here.
 ---
 
-Hello! I'm Melissa, a meditation teacher and the heart behind Homebody Meditation.
+I’m Melissa, a meditation teacher who came to this work through lived experience and a steady personal practice.
 
-I believe meditation doesn't have to look a certain way to be meaningful. My approach is relational and real, grounded in conversation, shaped by curiosity, and rooted in the understanding that connection is always available even in the middle of real life. I teach meditation in a warm, grounded way and invite people to return to themselves with softness rather than striving.
+Meditation became meaningful to me when it became something I could return to, a way to pause, breathe, and check in during everyday moments, not just when things were quiet or easy. I didn’t set out to teach; sharing this work grew naturally after completing Untamed Wisdom Meditation Teacher Training in 2024, as a way to offer what had become genuinely supportive in my own life.
 
-Since I can remember, I've always been drawn to finding an inner steadiness, a quiet confidence that helps me meet life as it is. And let's be real, it has been and continues to be a journey. I first started practicing meditation in 2019 when I attended an 8 week Mindfulness Based Cognitive Therapy series at The Ohio State University. After experiencing the benefits from that series, I began taking meditation classes at Radiant Yoga and Wellness in Worthington, Ohio with Stephanie Estice. These classes helped me through the pandemic and pregnancy and ultimately led me to Michele Vinbury's Untamed Wisdom Meditation Teacher Training. My intention was to take the course to deepen my own personal practice. That it did, and then some.
+When I’m practicing with others, I’m attentive to pace, simplicity, and creating space where nothing needs to be forced or fixed. I care about offering meditation in a way that feels human and doable, something you can actually bring into your daily life, rather than another thing to get right.
 
-My path into meditation began during a time of transition, when I was searching for a way to feel grounded in the middle of everyday life. Over time, that search became a practice, and that practice became something I wanted to share with others; it's not perfect but it's become a place that feels like home to me.
+Much of my own practice happens in ordinary moments, morning meditations, quiet pauses between tasks, or sitting near a window and noticing the light, often guided by natural rhythms like seasons and shifts in energy.
 
-My approach is gentle and relational. Each session begins with what's present, a conversation, a breath, a moment to land. From there, we move through meditation that supports you in exploring awareness and connection and even the inevitable moments of distraction. From breathwatching to body scans and personalized guided imagery meditations, the practice adapts to meet you, because there's no one right way to begin.
-
-What I hope most is that this work helps you remember your own capacity for connection to yourself, not just during meditation, but in the middle of real life. To rediscover that you already carry what you need, and that presence can be a steady companion along the way, like coming home.

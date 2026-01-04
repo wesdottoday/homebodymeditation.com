@@ -30,12 +30,39 @@
 </section>
 
 <!-- Main Content Section -->
-<section class="content-section page-content-section">
+<section class="content-section page-content-section{{ if .Params.content_image }} has-image{{ end }}">
     <div class="container">
+        {{ if .Params.content_image }}
+        <div class="content-layout">
+            <div class="content-image">
+                <img src="/images/{{ .Params.content_image }}" alt="{{ .Title }}">
+            </div>
+            <div class="content-text">
+                <div class="page-content-wrapper">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+        {{ else }}
         <div class="page-content-wrapper">
             {{ .Content }}
         </div>
+        {{ end }}
     </div>
 </section>
+
+<!-- Guides Section -->
+{{ if .Params.guides }}
+<section class="content-section guides-section">
+    <div class="container">
+        <div class="guides-wrapper">
+            <h2>{{ .Params.guides.title }}</h2>
+            <div class="guides-content">
+                {{ .Params.guides.content | markdownify }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
 
 {{ end }}

@@ -10,7 +10,7 @@ theme = 'homebody'
   # Homepage Hero Section
   [params.hero]
     image = ""  # Image removed from hero
-    headline = "ROOTED IN CONNECTION;<br>MEDITATION FOR REAL LIFE."
+    headline = "Rooted in Connection,<br>Meditation for Real Life."
     subheadline = "Homebody offers gentle, guided meditation sessions to help you practice connection day-by-day. Homebody is an invitation to come home to yourself, not to a perfect calm, but to a real one."
     description = ""
 
@@ -22,9 +22,9 @@ theme = 'homebody'
       description = """
 A one-on-one meditation journey designed to help you build a steady personal practice, one that feels supportive, lived-in and real. These sessions are offered as a five-week series, meeting weekly.
 
-Each week blends guided meditation and reflection, offering you space to ground, breathe and remember connection.
+Each week blends guided meditation and reflection, offering space to ground, breathe and remember connection.
 """
-      button_text = "One-on-One Practice"
+      button_text = "Explore"
       button_link = "/practice/"
     
     [params.offerings.community]
@@ -32,9 +32,9 @@ Each week blends guided meditation and reflection, offering you space to ground,
       description = """
 A welcoming space for group meditation, where we gather to practice presence together. These five weekly sessions include guided meditation, shared reflection, and the support of practicing alongside others.
 
-No experience needed, just an open heart and a willingness to pause and find connection in community.
+No experience needed, just a willingness to pause and find connection in community.
 """
-      button_text = "Community Practice"
+      button_text = "Explore"
       button_link = "https://www.radiantyogaandwellness.com/events-block/beginner-meditation-series"
       external = true
 
